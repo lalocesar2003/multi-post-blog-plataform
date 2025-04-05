@@ -67,6 +67,7 @@ export function DialogBox() {
           setPostData(data);
           setOpen(false);
           getPostData();
+          setPostDataUpDateId("");
         } else {
           toast.error(data?.message);
         }
