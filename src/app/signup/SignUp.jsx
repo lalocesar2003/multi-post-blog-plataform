@@ -4,13 +4,20 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { UseMyContext } from "@/context/Provider";
 import axios from "axios";
-import { Loader2 } from "lucide-react";
+import { Eye, EyeClosed, Loader2 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { toast } from "sonner";
 
 const SignUp = () => {
-  const { signUpData, setSignUpData, loading, setLoading } = UseMyContext();
+  const {
+    signUpData,
+    setSignUpData,
+    loading,
+    setLoading,
+    showPassword,
+    togglePassword,
+  } = UseMyContext();
 
   const OnChangeHandeler = (e) => {
     const { name, value } = e.target;
@@ -80,15 +87,30 @@ const SignUp = () => {
             <Label htmlFor="password" className={"text-md font-bold mb-2"}>
               Password
             </Label>
-            <Input
-              type={"password"}
-              placeholder="Enter your password"
-              id="password"
-              name="password"
-              className={"w-72 focus:ring-0 focus-visible:ring-0"}
-              value={signUpData.password}
-              onChange={OnChangeHandeler}
-            />
+            <div className="relative">
+              <Input
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your password"
+                id="password"
+                name="password"
+                className={"w-72 focus:ring-0 focus-visible:ring-0"}
+                value={signUpData.password}
+                onChange={OnChangeHandeler}
+              />
+
+              <Button
+                type="button"
+                onClick={togglePassword}
+                className={"absolute top-2 right-3 h-0 w-0"}
+                variant={"ghost"}
+              >
+                {showPassword ? (
+                  <Eye className="w-5 h-5" />
+                ) : (
+                  <EyeClosed className="w-5 h-5" />
+                )}
+              </Button>
+            </div>
           </div>
           <div className="input-items">
             <Button
