@@ -114,16 +114,14 @@ export function DialogBox() {
     >
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Share Your Thoughts</DialogTitle>
-          <DialogDescription>
-            Express what's on your mind & inpire the world!
-          </DialogDescription>
+          <DialogTitle>¿QUE DESEAS PUBLICAR?</DialogTitle>
+          <DialogDescription>Especifica los detalles</DialogDescription>
         </DialogHeader>
 
         <form className="flex flex-col gap-5" onSubmit={handlePostSubmit}>
           <Input
             type={"text"}
-            placeholder="Enter your post title here..."
+            placeholder="Añade el titulo aqui"
             className={"focus:ring-0 focus-visible:ring-0"}
             name="title"
             value={userPostData.title}
@@ -131,7 +129,7 @@ export function DialogBox() {
           />
           <Textarea
             type={"text"}
-            placeholder="Enter your post description here..."
+            placeholder="Añade una descripcion aqui"
             className={"focus:ring-0 focus-visible:ring-0"}
             name="description"
             value={userPostData.description}
@@ -153,8 +151,8 @@ export function DialogBox() {
 
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="draft">Draft</SelectItem>
-                <SelectItem value="publish">Publish</SelectItem>
+                <SelectItem value="draft">Borrador</SelectItem>
+                <SelectItem value="publish">Publico</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

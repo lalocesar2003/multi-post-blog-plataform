@@ -52,7 +52,7 @@ const SignIn = () => {
     <div className="flex items-center justify-center h-[100vh]">
       <div className="bg-white rounded-lg p-3 md:p-5">
         <h1 className="text-md md:text-lg text-center font-medium mb-3">
-          Sign In Now
+          Iniciar session
         </h1>
         <form onSubmit={handleSignInSubmit}>
           <div className="input-items mb-5">
@@ -118,7 +118,7 @@ const SignIn = () => {
           className="mt-3 text-blue-500 font-light text-xs flex justify-end"
           href={"/signup"}
         >
-          Not a member ?
+          No te haz registrado?
         </Link>
       </div>
     </div>

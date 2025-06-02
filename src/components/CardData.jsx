@@ -91,7 +91,7 @@ const CardData = ({ post }) => {
 
   const toggleCommentInput = (postId) => {
     if (!safeAuthToken || !safeLoginUserId) {
-      toast.error("You need to login first!");
+      toast.error("Necesitas iniciar session");
       return;
     }
 

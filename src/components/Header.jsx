@@ -31,17 +31,17 @@ const Header = () => {
       <div className="flex justify-between items-center bg-white w-full fixed shadow-lg h-16 px-10 z-50">
         <div className="logo">
           <h1 className="text-xl font-bold">
-            WEB<span className="text-emerald-600">.</span>
+            MARKETPLACE<span className="text-emerald-600">.</span>
           </h1>
         </div>
 
         <nav className="hidden md:block">
           <ul className="flex items-center gap-5 font-bold text-md">
             <li>
-              <Link href={"/"}>Home</Link>
+              <Link href={"/"}>INICIO</Link>
             </li>
             <li>
-              <Link href={"/mydata"}>My Data</Link>
+              <Link href={"/mydata"}>Mis posts</Link>
             </li>
             {authToken ? (
               <>
@@ -52,7 +52,7 @@ const Header = () => {
                     }
                     onClick={handleLogout}
                   >
-                    Logout
+                    Cerrar sesión
                   </Button>
                 </li>
                 <li>
@@ -63,7 +63,7 @@ const Header = () => {
                     }
                     onClick={() => setOpen(true)}
                   >
-                    Add Data
+                    Agregar post
                   </Button>
                 </li>
               </>
@@ -76,7 +76,7 @@ const Header = () => {
                   }
                   onClick={() => router.push("/signin")}
                 >
-                  Sign In
+                  Iniciar session
                 </Button>
               </li>
             )}

@@ -37,23 +37,23 @@ const MyData = () => {
   return (
     <div className="pt-24 pb-10 px-10">
       <div className="bg-white rounded-lg w-full md:w-1/2 text-black p-5 font-bold border-r-8 border-r-orange-600 shadow-lg">
-        <h1>Data Overview</h1>
+        <h1>Vista rapida</h1>
       </div>
 
       <div className="flex gap-2 md:gap-5 flex-wrap justify-center md:justify-start">
         {/*Published post box */}
         <div className="h-28 w-40 bg-[#10ac84] border-2 border-gray-300 rounded-4xl mt-5 shadow-2xl flex flex-col justify-center items-center">
-          <h1 className="text-md font-medium text-gray-800">Published Posts</h1>
+          <h1 className="text-md font-medium text-gray-800">Post publicados</h1>
           <h3>{publishPost.length}</h3>
         </div>
 
         <div className="h-28 w-40 bg-[#ff6348] border-2 border-gray-300 rounded-4xl mt-5 shadow-2xl flex flex-col justify-center items-center">
-          <h1 className="text-md font-medium text-gray-800">Draft Posts</h1>
+          <h1 className="text-md font-medium text-gray-800">Borradores</h1>
           <h3>{draftPost.length}</h3>
         </div>
 
         <div className="h-28 w-40 bg-[#2e86de] border-2 border-gray-300 rounded-4xl mt-5 shadow-2xl flex flex-col justify-center items-center">
-          <h1 className="text-md font-medium text-gray-800">Total Posts</h1>
+          <h1 className="text-md font-medium text-gray-800">Post totales</h1>
           <h3>{posts.length}</h3>
         </div>
       </div>
@@ -81,7 +81,7 @@ const MyData = () => {
           </>
         ) : (
           <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">
-            <h1>No post have been created</h1>
+            <h1>Ningun post ha sido publicado</h1>
           </div>
         )}
       </div>
