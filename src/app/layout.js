@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Provider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-200`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-yellow-200`}
         >
           <Header />
           {children}
